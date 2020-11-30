@@ -8,8 +8,9 @@ COPY package*.json $APPDIR/
 
 RUN npm install
 
+COPY server.js $APPDIR/
 COPY src/ $APPDIR/src
 
-EXPOSE 9000
+EXPOSE 9000 
 
 CMD ["npm", "start"]
